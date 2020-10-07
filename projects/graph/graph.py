@@ -43,7 +43,7 @@ class Graph:
         while q.size() > 0:
             current = q.dequeue()
             if current not in visited:
-                print(current)
+                print(f"{current}, ", end="")
                 visited.add(current)
 
                 for n in self.get_neighbors(current):
@@ -149,9 +149,12 @@ class Graph:
         if starting_vertex == destination_vertex:
             # Found it!
             return path
+
         for n in self.get_neighbors(starting_vertex):
+            # Go through each of the neighbors
             if n not in visited:
                 newpath = self.dfs_recursive(n, destination_vertex, visited, path)
+
                 if newpath != None:
                     return newpath
 
