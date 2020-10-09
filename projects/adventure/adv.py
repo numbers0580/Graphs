@@ -112,7 +112,7 @@ while len(testvisit) < len(world.rooms):
         traversal_path.append(backup)
         # Get updated room id
         roomid = player.current_room.id
-
+        
 
 # TRAVERSAL TEST
 visited_rooms = set()
